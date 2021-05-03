@@ -37,6 +37,7 @@ type Task struct {
 	URL          string        `json:"url"`
 }
 
+
 type CompletedTask struct {
 	Content       string `json:"content"`
 	MetaData      string `json:"meta_data"`
@@ -52,7 +53,7 @@ type CompletedTaskResponse struct {
 }
 
 type Labels struct {
-	ID       int    `json:"id"`
+	ID       int  `json:"id"`
 	Name     string `json:"name"`
 	Order    int    `json:"order"`
 	Color    int    `json:"color"`

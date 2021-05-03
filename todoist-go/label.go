@@ -3,7 +3,6 @@ package todoist
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 )
 
 func (c *Client) GetLabels() (*[]Labels, error) {
@@ -26,8 +25,6 @@ func (c *Client) GetLabelId(labels []interface{}) []int {
 		for _, n := range labels {
 			if n == label.Name {
 				id = append(id, label.ID)
-			} else {
-				fmt.Sprintf("%n label not found", n)
 			}
 		}
 	}

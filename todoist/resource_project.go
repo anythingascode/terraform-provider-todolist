@@ -65,9 +65,9 @@ func resourceToDoistReadProject(ctx context.Context, d *schema.ResourceData, m i
 func resourceToDoistUpdateProject(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
 	c := m.(*todo.Client)
 	if d.HasChanges("name", "color", "favorite") {
-		task_id, _ := strconv.Atoi(d.Id())
+		project_id, _ := strconv.Atoi(d.Id())
 		project := &todo.Project{
-			ID:       task_id,
+			ID:       project_id,
 			Name:     d.Get("name").(string),
 			Color:    d.Get("color").(int),
 			Favorite: d.Get("favorite").(bool),

@@ -8,9 +8,8 @@ terraform {
 }
 
 provider "todoist" {
-  token = "d3f7b0babb4fa120499762bee916b52e47ddbf4e"
 }
-/*
+
 data "todoist_project" "this" {
     name = "Inbox"
 }
@@ -41,11 +40,10 @@ output "task" {
   value = data.todoist_task.this
 }
 
-*/
 
 resource "todoist_task" "this"{
   content = "MyTaskWithLabels"
   project_id = 2263974343
-  labels = ["fake label"]
+  labels = ["MyLabel", "test", "23"]
 }
 
